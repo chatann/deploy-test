@@ -1,9 +1,13 @@
-const express = require("express");
+import express from "express";
 
 const router = express.Router();
 
-router.get("/hello", (req, res) => {
+router.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-module.exports = router;
+router.get("/ping", (req, res) => {
+  res.send("pong 🏓");
+});
+
+export default router;
